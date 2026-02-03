@@ -1,4 +1,4 @@
-# Chat AI
+# AI Chat Platform
 
 Full-stack AI chat application with Spring Boot backend and Next.js frontend.
 
@@ -6,15 +6,15 @@ Full-stack AI chat application with Spring Boot backend and Next.js frontend.
 
 This is a monorepo using Git submodules:
 
-- `backend/` - Spring Boot REST API (Java 8)
-- `frontend/` - Next.js web application (TypeScript)
+- `backend/` - [ai-chat-api](https://github.com/felipemacedo1/ai-chat-api) - Spring Boot REST API (Java 8)
+- `frontend/` - [ai-chat-ui](https://github.com/felipemacedo1/ai-chat-ui) - Next.js web application (TypeScript)
 
 ## Getting Started
 
 ### Clone with submodules
 
 ```bash
-git clone --recurse-submodules <repository-url>
+git clone --recurse-submodules https://github.com/felipemacedo1/ai-chat-platform.git
 ```
 
 ### Or initialize submodules after clone
@@ -32,14 +32,14 @@ git submodule update --remote
 
 ## Development
 
-### Backend
+### Backend (ai-chat-api)
 
 ```bash
 cd backend
 ./mvnw spring-boot:run
 ```
 
-### Frontend
+### Frontend (ai-chat-ui)
 
 ```bash
 cd frontend

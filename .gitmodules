@@ -1,6 +1,6 @@
 [submodule "backend"]
 	path = backend
-	url = ./backend
+	url = https://github.com/felipemacedo1/ai-chat-api.git
 [submodule "frontend"]
 	path = frontend
-	url = ./frontend
+	url = https://github.com/felipemacedo1/ai-chat-ui.git
