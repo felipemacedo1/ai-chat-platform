@@ -1,5 +1,7 @@
 # Implementation Plan
 
+> **Nota de Versionamento**: Ao concluir cada tarefa ou grupo de tarefas relacionadas, fazer commit das alterações com mensagem descritiva seguindo o padrão: `feat(<módulo>): <descrição> - Task X.X`
+
 ## Backend (Spring Boot)
 
 - [x] 1. Setup do projeto backend Spring Boot
@@ -179,16 +181,26 @@
     - **Property 6: Whitespace-only messages are rejected**
     - **Validates: Requirements 2.2**
 
-- [ ] 6. Implementar integração com AI Provider
-  - [ ] 6.1 Criar AiService
+- [x] 6. Implementar integração com AI Provider
+
+
+
+
+  - [x] 6.1 Criar AiService
+
+
     - Implementar interface para AI provider (OpenAI/Claude)
     - Criar método sendMessage que recebe contexto e retorna resposta
     - Implementar tratamento de erros com retry
     - _Requirements: 2.1, 2.5_
-  - [ ] 6.2 Write property test for AI error handling
+  - [x] 6.2 Write property test for AI error handling
+
+
     - **Property 7: AI errors are handled gracefully**
     - **Validates: Requirements 2.5**
-  - [ ] 6.3 Integrar AiService com MessageController
+  - [x] 6.3 Integrar AiService com MessageController
+
+
     - Chamar AI após salvar mensagem do usuário
     - Salvar resposta da AI como nova mensagem
     - Auto-gerar título na primeira resposta
@@ -199,7 +211,11 @@
     - RegisterRequest, LoginRequest, CreateConversationRequest, CreateMessageRequest
     - Usar @Valid, @NotBlank, @Email, @Size annotations
     - _Requirements: 6.3_
-  - [ ] 7.2 Write property test for request validation
+  - [x] 7.2 Write property test for request validation
+
+
+
+
     - **Property 14: Request validation rejects invalid schemas**
     - **Validates: Requirements 6.3**
   - [x] 7.3 Criar GlobalExceptionHandler
@@ -207,25 +223,51 @@
     - Logar erros internos
     - Retornar respostas sanitizadas
     - _Requirements: 6.5_
-  - [ ] 7.4 Write property test for JWT guard
+  - [x] 7.4 Write property test for JWT guard
+
+
+
+
     - **Property 13: JWT validation guards endpoints**
     - **Validates: Requirements 6.1, 6.2**
 
-- [ ] 8. Checkpoint - Garantir que todos os testes do backend passam
+- [x] 8. Checkpoint - Garantir que todos os testes do backend passam
+
+
+
+
   - Ensure all tests pass, ask the user if questions arise.
 
 ## Frontend (Next.js - Feature-Based Architecture)
 
-- [ ] 9. Setup do projeto frontend Next.js
-  - [ ] 9.1 Inicializar projeto Next.js com TypeScript
+- [x] 9. Setup do projeto frontend Next.js
+
+
+
+
+
+  - [x] 9.1 Inicializar projeto Next.js com TypeScript
+
     - Criar projeto com `create-next-app`
     - Configurar App Router
     - _Requirements: 4.1_
-  - [ ] 9.2 Configurar Flowbite React e Tailwind CSS
+
+
+  - [x] 9.2 Configurar Flowbite React e Tailwind CSS
+
+
+
+
     - Instalar flowbite-react e tailwindcss
+
+
     - Configurar tailwind.config.js com Flowbite plugin
     - _Requirements: 4.1, 4.3_
-  - [ ] 9.3 Criar estrutura base de features
+  - [x] 9.3 Criar estrutura base de features
+
+
+
+
     - Criar diretórios: features/auth, features/conversations, features/messages, features/chat
     - Criar shared/lib/httpClient.ts com Axios configurado
     - Criar config/env.ts para variáveis de ambiente
