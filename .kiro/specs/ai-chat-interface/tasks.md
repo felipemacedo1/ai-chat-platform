@@ -2,6 +2,8 @@
 
 > **Nota de Versionamento**: Ao concluir cada tarefa ou grupo de tarefas relacionadas, fazer commit das alterações com mensagem descritiva seguindo o padrão: `feat(<módulo>): <descrição> - Task X.X`
 
+> **Instrução para o Agente**: Ao finalizar cada tarefa principal (ex: Task 13), executar `git add -A`, `git commit -m "feat(<módulo>): <descrição> - Task X.X"` e `git push` automaticamente.
+
 ## Backend (Spring Boot)
 
 - [x] 1. Setup do projeto backend Spring Boot
@@ -273,89 +275,140 @@
     - Criar config/env.ts para variáveis de ambiente
     - _Requirements: 6.1, 6.2_
 
-- [ ] 10. Implementar feature de autenticação (features/auth)
-  - [ ] 10.1 Criar DTOs de auth
+- [x] 10. Implementar feature de autenticação (features/auth)
+
+
+
+
+
+  - [x] 10.1 Criar DTOs de auth
+
     - features/auth/dto/request.ts: LoginRequest, RegisterRequest
     - features/auth/dto/response.ts: User, AuthResponse
     - _Requirements: 1.1, 1.3_
-  - [ ] 10.2 Criar authService
+  - [x] 10.2 Criar authService
+
+
     - features/auth/services/authService.ts
     - Métodos: login, register, logout (1:1 com AuthController)
     - _Requirements: 1.1, 1.3, 1.5_
-  - [ ] 10.3 Criar AuthContext
+  - [x] 10.3 Criar AuthContext
+
+
     - features/auth/context/AuthContext.tsx
     - Estado global: user, token, isAuthenticated
     - Persistir token no localStorage
     - _Requirements: 1.3, 1.5_
-  - [ ] 10.4 Criar useAuth hook (Controller)
+  - [x] 10.4 Criar useAuth hook (Controller)
+
+
     - features/auth/hooks/useAuth.ts
     - Orquestra: handleLogin, handleRegister, handleLogout
     - Gerencia loading e erros
     - _Requirements: 1.1, 1.3, 1.5_
-  - [ ] 10.5 Criar componentes de auth
+  - [x] 10.5 Criar componentes de auth
+
+
     - features/auth/components/LoginForm.tsx
     - features/auth/components/RegisterForm.tsx
     - Usar componentes Flowbite (Card, TextInput, Button)
     - Exibir erros de validação
     - _Requirements: 1.1, 1.2, 1.3, 1.4_
-  - [ ] 10.6 Criar páginas de auth
+  - [x] 10.6 Criar páginas de auth
+
+
+
     - app/(auth)/login/page.tsx - compõe LoginForm
     - app/(auth)/register/page.tsx - compõe RegisterForm
     - Implementar proteção de rotas
     - _Requirements: 1.3_
 
-- [ ] 11. Implementar feature de conversas (features/conversations)
-  - [ ] 11.1 Criar DTOs de conversations
+- [x] 11. Implementar feature de conversas (features/conversations)
+
+
+
+
+  - [x] 11.1 Criar DTOs de conversations
+
+
     - features/conversations/dto/request.ts: CreateConversationRequest, UpdateConversationRequest
     - features/conversations/dto/response.ts: ConversationResponse, PaginatedResponse
     - _Requirements: 3.1, 3.4, 6.4_
-  - [ ] 11.2 Criar conversationService
+  - [x] 11.2 Criar conversationService
+
+
     - features/conversations/services/conversationService.ts
     - Métodos: getAll, getById, create, update, delete (1:1 com ConversationController)
     - _Requirements: 3.1, 3.2, 3.3, 3.4_
-  - [ ] 11.3 Criar useConversations hook (Controller)
+  - [x] 11.3 Criar useConversations hook (Controller)
+
+
     - features/conversations/hooks/useConversations.ts
     - Orquestra: fetchConversations, createConversation, renameConversation, deleteConversation
     - Gerencia loading, erro e lista de conversas
     - _Requirements: 3.1, 3.2, 3.3, 3.4, 5.2_
-  - [ ] 11.4 Criar componentes de conversations
+  - [x] 11.4 Criar componentes de conversations
+
+
     - features/conversations/components/ChatSidebar.tsx
     - features/conversations/components/ConversationList.tsx
     - features/conversations/components/ConversationItem.tsx
     - Layout responsivo (collapsible em mobile)
     - _Requirements: 3.1, 3.2, 3.3, 3.4, 4.1_
 
-- [ ] 12. Implementar feature de mensagens (features/messages)
-  - [ ] 12.1 Criar DTOs de messages
+- [x] 12. Implementar feature de mensagens (features/messages)
+
+
+
+
+  - [x] 12.1 Criar DTOs de messages
+
+
     - features/messages/dto/request.ts: CreateMessageRequest
     - features/messages/dto/response.ts: MessageResponse, MessageRole
     - _Requirements: 5.4, 5.5_
-  - [ ] 12.2 Criar messageService
+  - [x] 12.2 Criar messageService
+
+
     - features/messages/services/messageService.ts
     - Métodos: getByConversation, create (1:1 com MessageController)
     - _Requirements: 2.1, 5.1_
-  - [ ] 12.3 Criar useMessages hook (Controller)
+  - [x] 12.3 Criar useMessages hook (Controller)
+
+
     - features/messages/hooks/useMessages.ts
     - Orquestra: fetchMessages, sendMessage
     - Validação de mensagem vazia
     - Gerencia loading, erro e lista de mensagens
     - _Requirements: 2.1, 2.2, 5.1, 5.3_
-  - [ ] 12.4 Criar componentes de messages
+  - [x] 12.4 Criar componentes de messages
+
+
     - features/messages/components/ChatMessages.tsx - lista de mensagens com auto-scroll
     - features/messages/components/MessageBubble.tsx - estilização user/assistant, markdown
     - features/messages/components/ChatInput.tsx - textarea auto-resize, Enter/Shift+Enter
     - _Requirements: 2.1, 2.2, 2.3, 2.4, 4.2, 4.3, 4.4, 4.5_
 
-- [ ] 13. Implementar feature de chat (features/chat)
-  - [ ] 13.1 Criar useChat hook (Controller)
+- [x] 13. Implementar feature de chat (features/chat)
+
+
+
+
+  - [x] 13.1 Criar useChat hook (Controller)
+
+
     - features/chat/hooks/useChat.ts
     - Orquestra conversa ativa, integra useConversations e useMessages
     - _Requirements: 3.2_
-  - [ ] 13.2 Criar ChatLayout component
+
+  - [x] 13.2 Criar ChatLayout component
+
     - features/chat/components/ChatLayout.tsx
     - Integra Sidebar, Messages e Input
     - _Requirements: 3.2, 4.1_
-  - [ ] 13.3 Criar página principal de chat
+
+
+  - [x] 13.3 Criar página principal de chat
     - app/(chat)/page.tsx - compõe ChatLayout
     - Proteção de rota (requer autenticação)
     - _Requirements: 2.1, 2.2, 2.5, 3.2_
